@@ -1,0 +1,133 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*header*/
+
+#header {
+	z-index: 30;
+	height: 48px;
+	width: 100%;
+	min-width: 640px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-color: #FFFF33;
+}
+
+#header .logo {
+	z-index: 35;
+	float: left;
+	font-size: 0pt;
+	overflow: hidden;
+	text-indent: -999em;
+	width: 367px;
+	height: 74px;
+	position: fixed;
+	top: 10px;
+	left: 0;
+	background-color: transparent;
+	background-image: url(../img/oheyesee_logo.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#header h2 a, #header .logo a {
+display: block;
+height: 85px;
+width: 367px;
+}
+
+#header #menu {
+	list-style: none;
+	list-style-type: none;
+	list-style-position: initial;
+	list-style-image: initial;
+	
+	padding-left: 50px;
+	margin-top: 16px;
+	font-style: normal;
+}
+
+#header #menu ul {
+	margin: 0;
+	float: right;
+	padding: 0;
+	position: fixed;
+	right: 130px;
+}
+
+#header #menu li {
+	font-family: "Bebas Neue";
+	text-transform: uppercase;
+	color: #666;
+	display: inline;
+	float: left;
+	font-size: 20px;
+}
+
+#header #menu > ul > li {
+	padding-top: 0;
+	padding-right: 13px;
+	padding-bottom: 10px;
+	padding-left: 0;
+}
+
+#header #menu li a {
+	color: #333;
+	text-decoration: none;
+}
+
+#header #menu li a:hover {
+	color: #F36;
+	text-decoration: none;  
+}
+
+
+#menu{
+-webkit-font-smoothing: antialiased;
+}
+
+
+#header .lookbook {
+	z-index: 35;
+	float: right;
+	overflow: hidden;
+	text-indent: -999em;
+	width: 129px;
+	height: 48px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: transparent;
+	background-image: url(../img/icn_lookbook.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#header .lookbook a {
+display: block;
+height: 48px;
+width: 129px;
+}
+
+
+#search_bar {
+	z-index: 25;
+	height: 70px;
+	width: 100%;
+	min-width: 980px;
+	position: fixed;
+	top: 48px;
+	left: 0;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	background-color: #666666;
+}
+
+/*end*/
