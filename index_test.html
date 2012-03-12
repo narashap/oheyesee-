@@ -4,33 +4,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>oheyesee</title>
 
-<link href="assets/css/style.css" rel="stylesheet" type="text/css">
-
-<link href="assets/css/masonry.css" rel="stylesheet" type="text/css">
-
-<script type="text/javascript" src="assets/js/jquery-1.7.1.min.js"></script>
+<link href="assets/css/style_test.css" rel="stylesheet" type="text/css">
 
 
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 
 <script type="text/javascript" src="assets/js/jquery.masonry.min.js"></script>
 
-<script type="text/javascript" src="assets/js/modernizr-transitions.js"></script>
 
 <script>
-  $(function(){
-
-    var $container = $('#container');
-  
-    $container.imagesLoaded( function(){
-      $container.masonry({
-        itemSelector : '.box',
-		columnWidth: function( containerWidth ) {
-    		return containerWidth / 5;
-		},
-		isAnimated: !Modernizr.csstransitions,	
-	  });
-    });
+var $container = $('#container');
+$container.imagesLoaded(function(){
+  $container.masonry({
+    itemSelector : '.item',
+    columnWidth : 240
   });
+});
 </script>
 
 </head>
@@ -74,7 +65,7 @@
 <div id="search_bar"></div> 
 
 <!---content--->
-<div id="container" class="clearfix fluid">
+<div id="container" >
   
     <div class="box photo col1">
       <a href="#" title="Deal of the week"><img src="assets/img/deal.png" width="386" height="275" alt="Deal" /></a>
