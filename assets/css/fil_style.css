@@ -1,0 +1,149 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.a,.b,.c,.d,.e,.f,.g,.h,.i,.j{background-color:#CCC}
+
+.item{padding-left:20px;
+	padding-right:20px;}
+
+
+body{
+	background-color: white;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	display: block;
+	font-family: 'Varela Round', sans-serif;
+	
+
+}
+
+
+ul li{
+	list-style-type: none;
+	display: inline;
+}
+
+li{padding-left:8px;
+padding-right:8px;
+}
+
+a{
+	text-decoration:none;
+	color:black;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+a:hover{
+	color:#FFF;
+	background-color: #0CC;
+}
+	
+#container{
+	height: 1000px;
+	clear:both;
+	padding-bottom: 10px;
+	margin-top: 115px;
+}
+
+.head{
+	clear:both;
+}
+
+
+.item, .expanded{
+	color: white;
+	margin-top: 10px;
+	margin-left: 10px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.size1{
+	width: 175px;
+	height: 100px;
+	font-size: 13px;
+}
+
+.size2{
+	width: 250px;
+	height: 250px;
+	font-size: 25px;
+}
+
+.size3{
+	width: 400px;
+	height: 300px;
+	font-size: 35px;
+}
+
+.expanded{
+	width: 600px;
+	height: 400px;
+	font-size: 55px;
+}
+
+
+.thumbn{
+	display: block;
+	background-repeat:no-repeat;
+	background-size: 100%;
+	margin-right: auto;
+	margin-left:auto;
+	margin-top:10px;
+	
+}
+
+.size1 .thumbn{
+	width:60px;
+	height:60px;
+}
+
+.size2 .thumbn{
+	width:140px;
+	height:140px;
+}
+.size3 .thumbn{
+	width:220px;
+	height:220px;
+}
+
+.expanded .thumbn{
+	width: 50px;
+	height:50px;
+}
+
+
+
+.title{
+	float:left;
+}
+
+.header{
+	font-size: 35px;
+	padding-top: 10px;
+	padding-left: 10px;
+	text-shadow: 2px 2px 10px #d7d7d7;
+	filter: dropshadow(color=#d7d7d7, offx=2, offy=2);
+	float:left;
+}
+
+.showexpanded{
+	display:none;
+}
+
+.info{
+	font-size:12px;
+	margin: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	color:#F63;
+}
+
+largeimg{
+	width:430px;
+	margin-top:10px;
+}
+

@@ -4,33 +4,57 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>oheyesee</title>
 
+<link href="assets/css/masonry.css" rel="stylesheet" type="text/css">
 <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 
-<link href="assets/css/masonry.css" rel="stylesheet" type="text/css">
-
-<script type="text/javascript" src="assets/js/jquery-1.7.1.min.js"></script>
 
 
-
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.masonry.min.js"></script>
 
-<script type="text/javascript" src="assets/js/modernizr-transitions.js"></script>
 
-<script>
-  $(function(){
+<script type="text/javascript">
+//doc ready function
+jQuery(document).ready(function(){
 
-    var $container = $('#container');
-  
-    $container.imagesLoaded( function(){
-      $container.masonry({
-        itemSelector : '.box',
-		columnWidth: function( containerWidth ) {
-    		return containerWidth / 5;
-		},
-		isAnimated: !Modernizr.csstransitions,	
-	  });
+//portfolio overlays
+	jQuery(".thumbnail img").hover(function() {
+		jQuery(this).css({ opacity: 0.4 });
+	}, function() {
+		jQuery(this).css({ opacity: 1 });
+	});
+
+	
+//expanding panels	
+	jQuery("div.fulltestimonial").hide();
+	
+	jQuery('a.panel').toggle(function() {
+  		jQuery(this).text("Read Less");
+  		jQuery(this).next().slideDown("slow");
+	}, function() {
+  		jQuery(this).text("Read More");
+  		jQuery(this).next().slideUp("slow");
+	});
+
+// initialize masonry
+	jQuery('.masonry').imagesLoaded(function(){
+     	jQuery('.masonry').masonry({
+          	itemSelector: '.project',
+          	isResizable: true,
+          	columnWidth: jQuery('.masonry').width() / 3
+      	});
     });
-  });
+
+// bind to resize
+	jQuery(window).resize(function(){
+  		jQuery('.masonry').masonry({
+    		columnWidth: jQuery('.masonry').width() / 3
+  		});
+	});
+
+//end doc ready function	
+});
+
 </script>
 
 </head>
@@ -41,7 +65,7 @@
 
 <div id="header">
 
-    <div class="logo"><a href="../Desktop/oheyesee/index.html"></a></div>
+    <div class="logo"><a href="../Downloads/Desktop/oheyesee/index.html"></a></div>
     
     <div id="menu">
         <ul class="cl">
@@ -74,26 +98,42 @@
 <div id="search_bar"></div> 
 
 <!---content--->
-<div id="container" class="clearfix fluid">
+<div id="container" class="clearfix">
   
-    <div class="box photo col1">
-      <a href="#" title="Deal of the week"><img src="assets/img/deal.png" width="386" height="275" alt="Deal" /></a>
+    <div class="box col1">
+    <div class="thumbnail">
+      <a href="#"><img width="386" height="275" src="assets/img/deal.png" class="deal" alt="weekly_deal" title="Deal" /></a>
     </div>
-    <div class="box photo col2">
-      <a href="#" title="News"><img src="assets/img/news.png" width="283" height="190" alt="News" /></a>
     </div>
-    <div class="box photo col3">
-      <a href="#" title="Intro of AR"><img src="assets/img/video.png" width="554" height="381" alt="Video" /></a>
+    
+    <div class="box col2">
+    <div class="thumbnail">
+      <a href="#"><img width="283" height="190" src="assets/img/news.png" alt="news" title="News" /></a>
+    </div>
+    </div>
+    
+    <div class="box col3">
+    <div class="thumbnail">
+      <a href="#"><img width="554" height="381" src="assets/img/video.png" alt="intro" title="Intro" /></a>
     </div> 
-    <div class="box photo col1">
-      <a href="#" title="FallWinter 2012"><img src="assets/img/FallWinter.png" width="386" height="139" alt="FallWinter" /></a>
+    </div>
+    
+    <div class="box col1">
+    <div class="thumbnail">
+      <a href="#"><img width="386" height="139" src="assets/img/FallWinter.png" alt="fall_winter" title="Fall_Winter" /></a>
+    </div>
     </div>
 
-	<div class="box photo col2">
-      <a href="#" title="Welcome Note"><img src="assets/img/welcome.png" width="283" height="508" alt="Hi" /></a>
+	<div class="box col2">
+    <div class="thumbnail">
+      <a href="#"><img width="283" height="508" src="assets/img/welcome.png" alt="welcome" title="Welcome" /></a>
     </div>
-    <div class="box photo col4">
-      <a href="#" title="Latest Trends"><img src="assets/img/latest.png" width="339" height="315" alt="Latest" /></a>
+    </div>
+    
+    <div class="box col4">
+    <div class="thumbnail">
+      <a href="#"><img width="339" height="315" src="assets/img/latest.png" alt="latest" title="Latest" /></a>
+    </div>
     </div>
    
 

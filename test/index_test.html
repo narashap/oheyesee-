@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US"> 
+<head>
+ 
+<!-- Viewport for mobile browsers -->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+<title>oheyesee</title>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+
+
+<!-- TypeKit Javascript -->
+
+
+<!-- Load jQuery & Plugins -->
+
+
+
+
+<script type='text/javascript' src="../assets/js/jquery-1.7.1.min.js"></script>
+
+
+<script type="text/javascript" src="../assets/js/jquery.masonry.js"></script>
+
+
+</head>
+
+
+<body>
+	
+
+	<!-- #header_wrapper -->
+	
+	
+	<div id="container" class="clearfix">
+	
+	
+		
+		<div id="cnav">
+		
+		<div class="row">
+			<div class="threecol first"></div>
+			
+				<div class="ninecol">
+					<div class="twelvecol masonry">
+													
+					<div class="section">
+					<div class="thumbnail">
+								<a href="#"><img width="772" height="550" src="../assets/img/deal.png" class="deal" alt="weekly_deal" title="Deal" /></a>
+					</div><!-- .thumbnail -->
+						
+					</div><!-- .section -->
+                    
+                    <div class="section">
+							<div class="thumbnail">
+								<a href="#"><img width="283" height="190" src="../assets/img/news.png" alt="News" title="News" /></a>
+							</div><!-- .thumbnail -->
+						
+					</div><!-- .section -->
+                    
+                    <div class="section">
+							<div class="thumbnail">
+								<a href="#"><img width="554" height="381" src="../assets/img/video.png" alt="Intro" title="Intro" /></a>
+							</div><!-- .thumbnail -->
+						
+					</div><!-- .section -->
+                    
+                    <div class="section">
+							<div class="thumbnail">
+								<a href="#"><img width="386" height="139" src="../assets/img/FallWinter.png" alt="Fall_Winter" title="Fall_Winter" /></a>
+							</div><!-- .thumbnail -->
+                    </div><!-- .section -->
+                    
+                                  <div class="section">
+							<div class="thumbnail">
+								<a href="#"><img width="339" height="315" src="../assets/img/latest.png" alt="Welcome" title="Welcome" /></a>
+							</div><!-- .thumbnail -->
+						
+					</div><!-- .section -->
+                    
+                    <div class="section">
+							<div class="thumbnail">
+								<a href="#"><img width="283" height="508" src="../assets/img/welcome.png" alt="Welcome" title="Welcome" /></a>
+							</div><!-- .thumbnail -->
+						
+					</div><!-- .section -->
+                    
+      
+     
+									
+					
+								</div><!-- .twelvecol -->
+			</div><!-- .ninecol -->
+		</div><!-- .row -->
+		
+		</div>
+		
+	
+ 		
+ 		
+	
+	</div><!-- #container -->
+
+
+
+
+
+<script type="text/javascript">
+//doc ready function
+jQuery(document).ready(function(){
+
+//overlays
+	jQuery(".thumbnail img").hover(function() {
+		jQuery(this).css({ opacity: 0.4 });
+	}, function() {
+		jQuery(this).css({ opacity: 1 });
+	});
+
+	
+/**expanding panels	
+	jQuery("div.fulltestimonial").hide();
+	
+	jQuery('a.panel').toggle(function() {
+  		jQuery(this).text("Read Less");
+  		jQuery(this).next().slideDown("slow");
+	}, function() {
+  		jQuery(this).text("Read More");
+  		jQuery(this).next().slideUp("slow");
+	});**/
+
+// initialize masonry
+	jQuery('.masonry').imagesLoaded(function(){
+     	jQuery('.masonry').masonry({
+          	itemSelector: '.section',
+          	isResizable: true,
+          	columnWidth: jQuery('.masonry').width() / 3
+      	});
+    });
+
+// bind to resize
+	jQuery(window).resize(function(){
+  		jQuery('.masonry').masonry({
+    		columnWidth: jQuery('.masonry').width() / 3
+  		});
+	});
+
+//end doc ready function	
+});
+
+</script>
+
+
+</body>
+</html>
